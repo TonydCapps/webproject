@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact – Tony's Hacker Hub</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="matrix"></canvas>
+
+  <header>
+    <h1>Contact</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="projects.html">Projects</a>
+    <a href="about.html">About Me</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <main>
+    <section class="terminal">
+      <pre>Enter your message below and press SEND</pre>
+      <form class="contact-form">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" placeholder="> type your name"><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" placeholder="> type your email"><br>
+        <label for="message">Message</label><br>
+        <textarea id="message" name="message" rows="6" placeholder="> type your message"></textarea><br><br>
+
+        <button type="submit">SEND</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Tony Capps</p>
+  </footer>
+
+  <script src="matrix.js"></script>
+</body>
+</html>
