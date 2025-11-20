@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About Me – Tony's Hacker Hub</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="matrix"></canvas>
+
+  <header>
+    <h1>About Me</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">
+        <img src="images/hacker.png" alt="Home Icon" class="nav-icon"> Home
+    </a>
+    <a href="projects.html">
+        <img src="images/searching.png" alt="Projects Icon" class="nav-icon"> Projects
+    </a>
+    <a href="about.html">
+        <img src="images/data-copy.png" alt="About Icon" class="nav-icon"> About Me
+    </a>
+    <a href="contact.html">
+        <img src="images/spam.png" alt="Contact Icon" class="nav-icon"> Contact
+    </a>
+  </nav> 
+
+  <main>
+    <section id="about">
+      <div class="terminal">
+        <pre id="typedText"></pre>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Tony Capps</p>
+  </footer>
+
+  <script src="matrix.js"></script>
+  <script>
+    const profileText = `[ACCESS GRANTED]
+Loading profile...
+
+Name: Tony Capps
+Role: Cybersecurity Student & Builder
+Focus: Automation, Packaging, and Real-World Security Tools
+
+Skills:
+  - PowerShell scripting
+  - Debugging with logs
+  - Packaging & distribution
+  - Adapting scripts for quirks
+
+Interests:
+  - Automation and robust software packaging
+  - Hands-on troubleshooting
+  - Building reliable tools
+
+Current Mission:
+  - Produce distributable Crypto Wallet Finder
+  - Patch PowerShell scripts
+  - Ensure installer compatibility
+
+Character:
+  - Resilient, methodical learner
+  - Thrives on problem solving
+  - Values direct feedback
+  - Proud of progress
+
+[END OF PROFILE]`;
+
+    let i = 0;
+    const speed = 30;
+    function typeWriter() {
+      if (i < profileText.length) {
+        document.getElementById("typedText").textContent += profileText.charAt(i);
+        i++;
+        setTimeout(typeWriter, speed);
+      }
+    }
+    window.onload = typeWriter;
+  </script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Home Tony's Hacker Hub</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/png" href="assets/icons/hacker.png">
+
+
+</head>
+<body>
+  <canvas id="matrix"></canvas>
+
+  <header>
+    <h1>Welcome to Tony's Hacker Hub</h1>
+    <button id="themeToggle">Toggle Theme</button>
+  </header>
+
+  <nav>
+    <a href="index.html">
+        <img src="images/hacker.png" alt="Home Icon" class="nav-icon"> Home
+    </a>
+    <a href="projects.html">
+        <img src="images/searching.png" alt="Projects Icon" class="nav-icon"> Projects
+    </a>
+    <a href="about.html">
+        <img src="images/data-copy.png" alt="About Icon" class="nav-icon"> About Me
+    </a>
+    <a href="contact.html">
+        <img src="images/spam.png" alt="Contact Icon" class="nav-icon"> Contact
+    </a>
+  </nav>
+
+  <main>
+    <section>
+      <h2>Tools & Scripts</h2>
+      <ul>
+        <li>Crypto Wallet Finder</li>
+        <li>Installer Automation</li>
+        <li>Log Analyzer</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Learning Journey</h2>
+      <p>Currently pursuing an AA in Cybersecurity, focusing on PowerShell scripting and automation.</p>
+    </section>
+
+    <section>
+      <h2>Hacker Quotes</h2>
+      <blockquote>"Security is not a product, but a process." – Bruce Schneier</blockquote>
+    </section>
+
+    <section>
+      <h2>Cybersecurity News</h2>
+      <ul>
+        <li>Nov 2025: Debugging PowerShell packaging scripts.</li>
+        <li>Nov 2025: Testing multi-size ICO files.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Security Tips</h2>
+      <ul>
+        <li>Use unique passwords.</li>
+        <li>Enable two-factor authentication.</li>
+        <li>Keep systems updated.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Tony Capps</p>
+  </footer>
+
+  <script src="matrix.js"></script>
+  <script>
+    const toggleBtn = document.getElementById('themeToggle');
+    toggleBtn.addEventListener('click', () => {
+      document.body.classList.toggle('cyberpunk');
+    });
+  </script>
+</body>
+</html>

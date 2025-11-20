@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login Tony's Hacker Hub</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="matrix"></canvas>
+
+  <div class="login-terminal">
+    <h1>Secure Access Portal</h1>
+    <p>Enter password to continue</p>
+    <input type="password" id="password" placeholder="> ********">
+    <button id="loginBtn">LOGIN</button>
+    <p id="status"></p>
+  </div>
+
+  <script src="matrix.js"></script>
+  <script>
+    const loginBtn = document.getElementById('loginBtn');
+    const status = document.getElementById('status');
+
+    function typeWriter(text, element, callback) {
+      let i = 0;
+      const speed = 50;
+      function typing() {
+        if (i < text.length) {
+          element.textContent += text.charAt(i);
+          i++;
+          setTimeout(typing, speed);
+        } else if (callback) {
+          callback();
+        }
+      }
+      typing();
+    }
+
+    loginBtn.addEventListener('click', () => {
+      const pass = document.getElementById('password').value;
+      status.textContent = "";
+      if(pass.trim() !== "") {
+        status.style.color = "#00ff00";
+        typeWriter("[ACCESS GRANTED]", status, () => {
+          setTimeout(() => {
+            window.location.href = "index.html";
+          }, 1000);
+        });
+      } else {
+        status.style.color = "#ff0000";
+        typeWriter("[ACCESS DENIED]", status);
+      }
+    });
+  </script>
+</body>
+</html>
